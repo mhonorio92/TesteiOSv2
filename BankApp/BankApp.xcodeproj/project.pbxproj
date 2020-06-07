@@ -21,11 +21,10 @@
 		857E7105248D2A1B00D6BB0E /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70FF248D2A1B00D6BB0E /* BalanceViewController.swift */; };
 		857E7106248D2A1B00D6BB0E /* BalanceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E7100248D2A1B00D6BB0E /* BalanceWorker.swift */; };
 		85BC3CF5248D128D00AA2FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BC3CF4248D128D00AA2FA3 /* AppDelegate.swift */; };
-		85BC3CF7248D128D00AA2FA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BC3CF6248D128D00AA2FA3 /* ViewController.swift */; };
-		85BC3CFA248D128D00AA2FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BC3CF8248D128D00AA2FA3 /* Main.storyboard */; };
 		85BC3CFC248D128F00AA2FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85BC3CFB248D128F00AA2FA3 /* Assets.xcassets */; };
 		85BC3CFF248D128F00AA2FA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BC3CFD248D128F00AA2FA3 /* LaunchScreen.storyboard */; };
 		85BC3D0A248D128F00AA2FA3 /* BankAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BC3D09248D128F00AA2FA3 /* BankAppTests.swift */; };
+		85CB0689248D45C8004884A2 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB0688248D45C8004884A2 /* ViewCodeProtocol.swift */; };
 		970D892A7BC4871A7557BCD7 /* Pods_BankApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7E5AC6CD3710AAFB7ECA9 /* Pods_BankApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,14 +54,13 @@
 		857E7100248D2A1B00D6BB0E /* BalanceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceWorker.swift; sourceTree = "<group>"; };
 		85BC3CF1248D128D00AA2FA3 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BC3CF4248D128D00AA2FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		85BC3CF6248D128D00AA2FA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		85BC3CF9248D128D00AA2FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85BC3CFB248D128F00AA2FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85BC3CFE248D128F00AA2FA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85BC3D00248D128F00AA2FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85BC3D05248D128F00AA2FA3 /* BankAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BC3D09248D128F00AA2FA3 /* BankAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAppTests.swift; sourceTree = "<group>"; };
 		85BC3D0B248D128F00AA2FA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85CB0688248D45C8004884A2 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		8E670FC8F312893157F965C7 /* Pods-BankAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTests.release.xcconfig"; path = "Target Support Files/Pods-BankAppTests/Pods-BankAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9CF7E5AC6CD3710AAFB7ECA9 /* Pods_BankApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69075C62180B873DB517450 /* Pods_BankAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +108,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8570467F248D3852001ACABC /* Commom */ = {
+			isa = PBXGroup;
+			children = (
+				85CB0688248D45C8004884A2 /* ViewCodeProtocol.swift */,
+			);
+			path = Commom;
+			sourceTree = "<group>";
+		};
 		85BC3CE8248D128D00AA2FA3 = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +139,9 @@
 		85BC3CF3248D128D00AA2FA3 /* BankApp */ = {
 			isa = PBXGroup;
 			children = (
-				85E7A66C248D1BB800C1352A /* Commom */,
+				8570467F248D3852001ACABC /* Commom */,
 				85E7A669248D1B4800C1352A /* Feature */,
 				85BC3CF4248D128D00AA2FA3 /* AppDelegate.swift */,
-				85BC3CF6248D128D00AA2FA3 /* ViewController.swift */,
-				85BC3CF8248D128D00AA2FA3 /* Main.storyboard */,
 				85BC3CFB248D128F00AA2FA3 /* Assets.xcassets */,
 				85BC3CFD248D128F00AA2FA3 /* LaunchScreen.storyboard */,
 				85BC3D00248D128F00AA2FA3 /* Info.plist */,
@@ -187,13 +191,6 @@
 				857E7100248D2A1B00D6BB0E /* BalanceWorker.swift */,
 			);
 			path = Balance;
-			sourceTree = "<group>";
-		};
-		85E7A66C248D1BB800C1352A /* Commom */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Commom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +279,6 @@
 			files = (
 				85BC3CFF248D128F00AA2FA3 /* LaunchScreen.storyboard in Resources */,
 				85BC3CFC248D128F00AA2FA3 /* Assets.xcassets in Resources */,
-				85BC3CFA248D128D00AA2FA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +370,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				857E70F9248D29E600D6BB0E /* LoginViewController.swift in Sources */,
-				85BC3CF7248D128D00AA2FA3 /* ViewController.swift in Sources */,
 				857E70F6248D29E600D6BB0E /* LoginModels.swift in Sources */,
 				857E70F8248D29E600D6BB0E /* LoginRouter.swift in Sources */,
 				857E7106248D2A1B00D6BB0E /* BalanceWorker.swift in Sources */,
@@ -385,6 +380,7 @@
 				857E70F5248D29E600D6BB0E /* LoginInteractor.swift in Sources */,
 				857E7104248D2A1B00D6BB0E /* BalanceRouter.swift in Sources */,
 				857E7105248D2A1B00D6BB0E /* BalanceViewController.swift in Sources */,
+				85CB0689248D45C8004884A2 /* ViewCodeProtocol.swift in Sources */,
 				857E70F7248D29E600D6BB0E /* LoginPresenter.swift in Sources */,
 				857E70FA248D29E600D6BB0E /* LoginWorker.swift in Sources */,
 			);
@@ -409,14 +405,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		85BC3CF8248D128D00AA2FA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				85BC3CF9248D128D00AA2FA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		85BC3CFD248D128F00AA2FA3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
