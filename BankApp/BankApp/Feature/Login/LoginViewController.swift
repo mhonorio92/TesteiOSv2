@@ -11,79 +11,156 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol LoginDisplayLogic: class
 {
-  func displaySomething(viewModel: Login.Something.ViewModel)
+    func displaySomething(viewModel: Login.Something.ViewModel)
 }
 
-class LoginViewController: UIViewController, LoginDisplayLogic
-{
-  var interactor: LoginBusinessLogic?
-  var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = LoginInteractor()
-    let presenter = LoginPresenter()
-    let router = LoginRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+class LoginViewController: UIViewController, LoginDisplayLogic {
+    
+    var interactor: LoginBusinessLogic?
+    var router: (NSObjectProtocol & LoginRoutingLogic & LoginDataPassing)?
+    
+    lazy var loginBackground: UIView = {
+        return UIView()
+    }()
+    
+    lazy var userTextField: UITextField = {
+        return UITextField()
+    }()
+    
+    lazy var passwordTextField: UITextField = {
+        return UITextField()
+    }()
+    
+    lazy var titleLabel: UILabel = {
+        return UILabel()
+    }()
+    
+    lazy var loginButton: UIButton = {
+        return UIButton()
+    }()
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = Login.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Login.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter()
+        let router = LoginRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        viewCodeSetup()
+        doSomething()
+    }
+    
+    // MARK: Do something
+    
+    //@IBOutlet weak var nameTextField: UITextField!
+    
+    func doSomething()
+    {
+        let request = Login.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Login.Something.ViewModel)
+    {
+        //nameTextField.text = viewModel.name
+    }
+}
+
+extension LoginViewController: ViewCodeProtocol {
+    
+    func viewCodeHierarchySetup() {
+        view.addSubview(loginBackground)
+        loginBackground.addSubview(titleLabel)
+        loginBackground.addSubview(userTextField)
+        loginBackground.addSubview(passwordTextField)
+        loginBackground.addSubview(loginButton)
+    }
+    
+    func viewCodeConstraintSetup() {
+        
+        loginBackground.snp.makeConstraints { (mkr) in
+            mkr.edges.equalToSuperview()
+        }
+        
+        titleLabel.snp.makeConstraints { (mkr) in
+            mkr.centerX.equalToSuperview()
+            mkr.width.equalToSuperview().dividedBy(3)
+            mkr.height.equalTo(titleLabel.snp.width).multipliedBy(0.56)
+            mkr.top.equalToSuperview().offset(56)
+        }
+        
+        userTextField.snp.makeConstraints { (mkr) in
+            mkr.top.equalTo(titleLabel.snp.bottom).offset(105)
+            mkr.left.right.equalToSuperview().offset(16)
+            mkr.height.equalTo(50)
+        }
+        
+        passwordTextField.snp.makeConstraints { (mkr) in
+            mkr.width.equalTo(userTextField.snp.width)
+            mkr.top.equalTo(userTextField.snp.bottom).offset(21)
+            mkr.height.equalTo(50)
+        }
+        
+        loginButton.snp.makeConstraints { (mkr) in
+            mkr.bottom.equalToSuperview().offset(-33)
+            mkr.left.equalToSuperview().offset(86)
+            mkr.right.equalToSuperview().offset(-86)
+            mkr.height.equalTo(loginButton.snp.width).multipliedBy(0.3)
+        }
+    }
+    
+    func viewCodeThemeSetup() {
+        loginBackground.backgroundColor = .white
+        titleLabel.backgroundColor = UIColor(red: 0.23, green: 0.28, blue: 0.93, alpha: 1.0)
+        loginButton.backgroundColor = UIColor(red: 0.23, green: 0.28, blue: 0.93, alpha: 1.0)
+    }
+    
+    func viewCodeAdditionalSetup() {
+        titleLabel.text = "Bank"
+        titleLabel.textColor = .white
+    }
+    
 }
