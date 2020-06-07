@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		775A954D675DAAFEC18C95A9 /* Pods_BankAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69075C62180B873DB517450 /* Pods_BankAppTests.framework */; };
+		857E70F5248D29E600D6BB0E /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70EF248D29E600D6BB0E /* LoginInteractor.swift */; };
+		857E70F6248D29E600D6BB0E /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70F0248D29E600D6BB0E /* LoginModels.swift */; };
+		857E70F7248D29E600D6BB0E /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70F1248D29E600D6BB0E /* LoginPresenter.swift */; };
+		857E70F8248D29E600D6BB0E /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70F2248D29E600D6BB0E /* LoginRouter.swift */; };
+		857E70F9248D29E600D6BB0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70F3248D29E600D6BB0E /* LoginViewController.swift */; };
+		857E70FA248D29E600D6BB0E /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70F4248D29E600D6BB0E /* LoginWorker.swift */; };
+		857E7101248D2A1B00D6BB0E /* BalanceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70FB248D2A1B00D6BB0E /* BalanceInteractor.swift */; };
+		857E7102248D2A1B00D6BB0E /* BalanceModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70FC248D2A1B00D6BB0E /* BalanceModels.swift */; };
+		857E7103248D2A1B00D6BB0E /* BalancePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70FD248D2A1B00D6BB0E /* BalancePresenter.swift */; };
+		857E7104248D2A1B00D6BB0E /* BalanceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70FE248D2A1B00D6BB0E /* BalanceRouter.swift */; };
+		857E7105248D2A1B00D6BB0E /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E70FF248D2A1B00D6BB0E /* BalanceViewController.swift */; };
+		857E7106248D2A1B00D6BB0E /* BalanceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857E7100248D2A1B00D6BB0E /* BalanceWorker.swift */; };
 		85BC3CF5248D128D00AA2FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BC3CF4248D128D00AA2FA3 /* AppDelegate.swift */; };
 		85BC3CF7248D128D00AA2FA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BC3CF6248D128D00AA2FA3 /* ViewController.swift */; };
 		85BC3CFA248D128D00AA2FA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85BC3CF8248D128D00AA2FA3 /* Main.storyboard */; };
@@ -29,6 +41,18 @@
 
 /* Begin PBXFileReference section */
 		56E4EF3EF5E69D829DA697A0 /* Pods-BankAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAppTests.debug.xcconfig"; path = "Target Support Files/Pods-BankAppTests/Pods-BankAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		857E70EF248D29E600D6BB0E /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		857E70F0248D29E600D6BB0E /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		857E70F1248D29E600D6BB0E /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		857E70F2248D29E600D6BB0E /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		857E70F3248D29E600D6BB0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		857E70F4248D29E600D6BB0E /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		857E70FB248D2A1B00D6BB0E /* BalanceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInteractor.swift; sourceTree = "<group>"; };
+		857E70FC248D2A1B00D6BB0E /* BalanceModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModels.swift; sourceTree = "<group>"; };
+		857E70FD248D2A1B00D6BB0E /* BalancePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalancePresenter.swift; sourceTree = "<group>"; };
+		857E70FE248D2A1B00D6BB0E /* BalanceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRouter.swift; sourceTree = "<group>"; };
+		857E70FF248D2A1B00D6BB0E /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		857E7100248D2A1B00D6BB0E /* BalanceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceWorker.swift; sourceTree = "<group>"; };
 		85BC3CF1248D128D00AA2FA3 /* BankApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BC3CF4248D128D00AA2FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85BC3CF6248D128D00AA2FA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +166,12 @@
 		85E7A66A248D1B5D00C1352A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				857E70EF248D29E600D6BB0E /* LoginInteractor.swift */,
+				857E70F0248D29E600D6BB0E /* LoginModels.swift */,
+				857E70F1248D29E600D6BB0E /* LoginPresenter.swift */,
+				857E70F2248D29E600D6BB0E /* LoginRouter.swift */,
+				857E70F3248D29E600D6BB0E /* LoginViewController.swift */,
+				857E70F4248D29E600D6BB0E /* LoginWorker.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -149,6 +179,12 @@
 		85E7A66B248D1BA400C1352A /* Balance */ = {
 			isa = PBXGroup;
 			children = (
+				857E70FB248D2A1B00D6BB0E /* BalanceInteractor.swift */,
+				857E70FC248D2A1B00D6BB0E /* BalanceModels.swift */,
+				857E70FD248D2A1B00D6BB0E /* BalancePresenter.swift */,
+				857E70FE248D2A1B00D6BB0E /* BalanceRouter.swift */,
+				857E70FF248D2A1B00D6BB0E /* BalanceViewController.swift */,
+				857E7100248D2A1B00D6BB0E /* BalanceWorker.swift */,
 			);
 			path = Balance;
 			sourceTree = "<group>";
@@ -337,8 +373,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				857E70F9248D29E600D6BB0E /* LoginViewController.swift in Sources */,
 				85BC3CF7248D128D00AA2FA3 /* ViewController.swift in Sources */,
+				857E70F6248D29E600D6BB0E /* LoginModels.swift in Sources */,
+				857E70F8248D29E600D6BB0E /* LoginRouter.swift in Sources */,
+				857E7106248D2A1B00D6BB0E /* BalanceWorker.swift in Sources */,
+				857E7103248D2A1B00D6BB0E /* BalancePresenter.swift in Sources */,
+				857E7102248D2A1B00D6BB0E /* BalanceModels.swift in Sources */,
 				85BC3CF5248D128D00AA2FA3 /* AppDelegate.swift in Sources */,
+				857E7101248D2A1B00D6BB0E /* BalanceInteractor.swift in Sources */,
+				857E70F5248D29E600D6BB0E /* LoginInteractor.swift in Sources */,
+				857E7104248D2A1B00D6BB0E /* BalanceRouter.swift in Sources */,
+				857E7105248D2A1B00D6BB0E /* BalanceViewController.swift in Sources */,
+				857E70F7248D29E600D6BB0E /* LoginPresenter.swift in Sources */,
+				857E70FA248D29E600D6BB0E /* LoginWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
